@@ -1,0 +1,35 @@
+@use 'atoms';
+$break-small: 460px;
+$break-medium: 720px;
+$break-large: 1024px;
+
+@mixin breakpoint($break) {
+    @if $break==large {
+        @media (max-width: $break-large) {
+        @content;
+        }
+    } @else if $break==medium {
+        @media (max-width: $break-medium) {
+        @content;
+        }
+    } @else if $break==small {
+        @media (max-width: $break-small) {
+        @content;
+        }
+    } @else {
+        @media ($break) {
+        @content;
+        }
+    }
+}
+
+h1,
+h2,
+h3 {
+    font-family: $headers;
+}
+
+p {
+    font-family: $body;
+}
+
