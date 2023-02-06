@@ -3,3 +3,8 @@
 @use 'molecules';
 @use 'organisms' as o;  // can shorten the name if we like :)
 
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  
+}
