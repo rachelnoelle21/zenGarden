@@ -1,5 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+@font-face {
+    font-family: "Oxygen";
+    src: url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+}
+@font-face {
+    font-family: "DM Serif Display";
+    src: url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
+}
 
 $darkblue: #506F70;
 $darkgreen: #8B9474;
