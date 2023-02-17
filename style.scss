@@ -6,4 +6,9 @@
 body {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  background-color: #E2E7F2;
+}
+
+.intro {
+  grid-column: 2/6;
 }
