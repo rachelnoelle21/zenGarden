@@ -1,22 +1,4 @@
-@font-face {
-    font-family: "Oxygen";
-    src: url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-}
-@font-face {
-    font-family: "DM Serif Display";
-    src: url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
-}
-
-$darkblue: #506F70;
-$darkgreen: #8B9474;
-$lightblue: #E2E7F2;
-$lightgreen: #D0CEBA;
-$maroon: #4B2C23;
-
-$body: 'Oxygen', Arial, sans-serif;
-$headers: 'DM Serif Display', Georgia, serif;
-
-// @use 'variables';
+@use 'variables';
 $break-small: 460px;
 $break-medium: 720px;
 $break-large: 1024px;
