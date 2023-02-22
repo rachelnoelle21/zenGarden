@@ -1,4 +1,4 @@
-@use 'variables';
+@use 'variables' as *;
 $break-small: 460px;
 $break-medium: 720px;
 $break-large: 1024px;
@@ -29,7 +29,9 @@ h3 {
     font-family: $headers;
 }
 
-p {
+p,
+a,
+li {
     font-family: $body;
 }
 

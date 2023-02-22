@@ -1,18 +1,36 @@
-/* Error: Undefined variable.
- *    ,
- * 29 |     font-family: $headers;
- *    |                  ^^^^^^^^
- *    '
- *   _atoms.scss 29:18  @use
- *   style.scss 2:1     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a    \2577 \a 29 \2502      font-family: $headers;\a    \2502                   ^^^^^^^^\a    \2575 \a   _atoms.scss 29:18  @use\a   style.scss 2:1     root stylesheet";
+@font-face {
+  font-family: "Oxygen";
+  src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 }
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+}
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", Georgia, serif;
+}
+
+p,
+a,
+li {
+  font-family: "Oxygen", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: #E2E7F2;
+}
+
+.page-wrapper {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+[role=banner] {
+  display: grid;
+  grid-column: 2/6;
+}
+
+/*# sourceMappingURL=style.css.map */
