@@ -7,14 +7,46 @@
 body {
   margin: 0;
   background-color: $lightblue;
+  overflow-x: hidden;
 }
 
 .page-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 3rem;
 }
 
+
+// nav bar
+.resources {
+  display: none;
+}
+.zen-resources {
+  position: absolute;
+  top: 0;
+  width: 98%;
+  a {
+    display: inline;
+    float: right;
+    text-align: center;
+    padding-right: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    }
+  li a:hover {
+    text-shadow: 0px 0px 1px black;
+    }
+  ul {
+    text-decoration: none;
+    list-style: none
+    }
+}
+// nav bar
+
+// intro
 section [role="banner"] {
-  display: grid;
-  grid-column: 2/6;
+  text-align: center;
+  margin-top: 8rem;
+  h1 {
+    font-size: 400%;
+  }
+  
 }

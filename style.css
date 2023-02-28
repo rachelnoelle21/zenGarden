@@ -21,16 +21,44 @@ li {
 body {
   margin: 0;
   background-color: #E2E7F2;
+  overflow-x: hidden;
 }
 
 .page-wrapper {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  margin: 3rem;
+}
+
+.resources {
+  display: none;
+}
+
+.zen-resources {
+  position: absolute;
+  top: 0;
+  width: 98%;
+}
+.zen-resources a {
+  display: inline;
+  float: right;
+  text-align: center;
+  padding-right: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.zen-resources li a:hover {
+  text-shadow: 0px 0px 1px black;
+}
+.zen-resources ul {
+  text-decoration: none;
+  list-style: none;
 }
 
 section [role=banner] {
-  display: grid;
-  grid-column: 2/6;
+  text-align: center;
+  margin-top: 8rem;
+}
+section [role=banner] h1 {
+  font-size: 400%;
 }
 
 /*# sourceMappingURL=style.css.map */
