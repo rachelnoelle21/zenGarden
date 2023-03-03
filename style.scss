@@ -1,9 +1,21 @@
 // styles.scss
+@use 'variables' as *;
 @use 'atoms';  // assumes file is named _atoms.scss
 @use 'molecules';
 @use 'organisms' as o;  // can shorten the name if we like :)
 
 body {
+  margin: 0;
+  background-color: $lightblue;
+}
+
+.page-wrapper {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 }
+
+[role="banner"] {
+  display: grid;
+  grid-column: 2/6;
+}
+
