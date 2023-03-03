@@ -6,13 +6,12 @@
 
 body {
   margin: 0;
-  background-color: $lightblue;
   overflow-x: hidden;
 }
 
-.page-wrapper {
-  margin: 3rem;
-}
+// .page-wrapper {
+//   margin: 3rem;
+// }
 
 
 // nav bar
@@ -25,6 +24,7 @@ body {
   width: 98%;
   a {
     display: inline;
+    color: $darkblue;
     float: right;
     text-align: center;
     padding-right: 40px;
@@ -32,7 +32,7 @@ body {
     text-decoration: none;
     }
   li a:hover {
-    text-shadow: 0px 0px 1px black;
+    text-shadow: 0px 0px .5px black;
     }
   ul {
     text-decoration: none;
@@ -49,4 +49,22 @@ section [role="banner"] {
     font-size: 400%;
   }
   
+}
+
+
+.preamble {
+  display: grid;
+  grid-template-columns: .5fr 1.5fr 1.5fr .5fr;
+  background-color: $darkblue;
+  height: 25rem;
+  margin: 0 auto;
+  color: $lightgreen;
+}
+.preamble h3 {
+  display: grid;
+  grid-column: 2/3
+}
+.preamble:not(:first-child) {
+  display: grid;
+  grid-column: 3/4;
 }

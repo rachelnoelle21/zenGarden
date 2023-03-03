@@ -20,12 +20,7 @@ li {
 
 body {
   margin: 0;
-  background-color: #E2E7F2;
   overflow-x: hidden;
-}
-
-.page-wrapper {
-  margin: 3rem;
 }
 
 .resources {
@@ -39,6 +34,7 @@ body {
 }
 .zen-resources a {
   display: inline;
+  color: #436971;
   float: right;
   text-align: center;
   padding-right: 40px;
@@ -46,7 +42,7 @@ body {
   text-decoration: none;
 }
 .zen-resources li a:hover {
-  text-shadow: 0px 0px 1px black;
+  text-shadow: 0px 0px 0.5px black;
 }
 .zen-resources ul {
   text-decoration: none;
@@ -59,6 +55,25 @@ section [role=banner] {
 }
 section [role=banner] h1 {
   font-size: 400%;
+}
+
+.preamble {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
+  background-color: #436971;
+  height: 25rem;
+  margin: 0 auto;
+  color: #D0CEBA;
+}
+
+.preamble h3 {
+  display: grid;
+  grid-column: 2/3;
+}
+
+.preamble:not(:first-child) {
+  display: grid;
+  grid-column: 3/4;
 }
 
 /*# sourceMappingURL=style.css.map */
