@@ -7,11 +7,11 @@
 body {
   margin: 0;
   overflow-x: hidden;
+  abbr {
+    text-decoration: none;
+  }
 }
 
-// .page-wrapper {
-//   margin: 3rem;
-// }
 
 
 // nav bar
@@ -44,7 +44,13 @@ body {
 // intro
 section [role="banner"] {
   text-align: center;
-  margin-top: 8rem;
+  padding-top: 8rem;
+  background-image: url(./images/Mountain\ Forest.webp);
+  background-img {
+    object-fit: contain;
+    width: 30%;
+    height: auto;
+  }
   h1 {
     font-size: 400%;
   }
@@ -52,19 +58,45 @@ section [role="banner"] {
 }
 
 
+
+// body stuff
+.summary {
+  text-align: center;
+  margin: 5rem 0;
+}
+
 .preamble {
   display: grid;
-  grid-template-columns: .5fr 1.5fr 1.5fr .5fr;
-  background-color: $darkblue;
-  height: 25rem;
-  margin: 0 auto;
-  color: $lightgreen;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-flow: dense;
+  gap: 12px;
+  p {
+    grid-column: 2/3;
+    }
+  h3 {
+    grid-column: 2/3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    }
 }
-.preamble h3 {
+
+#zen-supporting {
   display: grid;
-  grid-column: 2/3
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-flow: dense;
+  gap: 12px;
 }
-.preamble:not(:first-child) {
+
+.participation {
   display: grid;
-  grid-column: 3/4;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-flow: dense;
+  gap: 12px;
+}
+
+.requirements {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-flow: dense;
+  gap: 12px;
 }
