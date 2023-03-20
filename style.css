@@ -26,6 +26,19 @@ body abbr {
   text-decoration: none;
 }
 
+.page-wrapper::before {
+  content: "";
+  background-image: url(./images/topography.svg);
+  background-size: cover;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+  z-index: -1;
+}
+
 .resources {
   display: none;
 }
@@ -64,8 +77,10 @@ body abbr {
   color: #436971;
 }
 #zen-intro h2 {
-  color: #436971;
-  font-size: 200%;
+  color: #8B9474;
+  font-size: 170%;
+  text-transform: lowercase;
+  font-style: italic;
 }
 #zen-intro #zen-summary {
   margin: 0 auto;

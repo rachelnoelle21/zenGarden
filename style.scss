@@ -12,9 +12,21 @@ body {
   }
 }
 
-// .page-wrapper {
-//   this is where we put the background swirls...
-// }
+.page-wrapper {
+  &::before {
+    content: "";
+    background-image: url(./images/topography.svg);
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
 
 // nav bar
 .resources {
@@ -54,8 +66,10 @@ body {
     color: $darkblue;
   }
   h2 {
-    color: $darkblue;
-    font-size: 200%;
+    color: $darkgreen;
+    font-size: 170%;
+    text-transform: lowercase;
+    font-style: italic;
   }
   #zen-summary {
     margin: 0 auto;
@@ -77,7 +91,6 @@ body {
       font-family: $headers;
       font-style: normal;
       @include caps-header;
-      // white-space: pre-line; trying to figure out how to break the line...
     }
     a:hover {
       background-color: $darkblue;
