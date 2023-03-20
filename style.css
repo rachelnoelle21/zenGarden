@@ -1,319 +1,351 @@
 @font-face {
-  font-family: "Oxygen";
-  src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
-}
-@font-face {
-  font-family: "DM Serif Display";
-  src: url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
-}
-
-/* ********************* */
-/* EXAMPLE CODE */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
-
-
-/* basic elements */
-html {
-    max-width: 460px;
-	margin: 0;
-	padding: 0;
-	}
-
-body { 
-    font: 75%;
-    margin: 0; 
-    padding: 0;
-    width: 100%;
-    background-color: white;
-    }
-
-h1, h2, h3 {
-    font-family: "DM Serif Display", Georgia, serif;
-    color: #436971;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 20;
-    text-align: center;
-}
-
-h1 {
-    margin-top: 10px;
-	display: block;
-    font-size: 5rem;
-    line-height: 5rem;
-    width: auto;
-}
-
-h2, h3 {
-    font-size: 2rem;
-}
-
-header h2 {
-    font-style: italic;
-    text-transform: lowercase;
-    color:  #4b2c23;
-    margin-bottom: 45%;
-}
-
-h3 { 
-	font: 30%;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	}
-
-p, a, li {
-  font-family: "Oxygen", Arial, sans-serif;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  line-height: 2rem;
-  color: #506f70;
-  padding: 1.5%;
-}
-
-abbr {
-    text-decoration: none;
-}
-
-/* .open {
-  display: block;
-} */
-
-.zen-resources ul li a {
-  display: block;
-  padding: 1rem 2vw;
-  font-weight: 600;
-  text-decoration: none;
-  border-top: 1px solid rgba(0, 0, 0, .5);
-}
-
-.zen-resources ul li.active a {
-  background-color: rgba(0,0,0,.2);
-  color: #fff;
-}
-
-.zen-resources ul li a:hover {
-  background-color: #e2e7f2;
-}
-
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #4b2c23;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D0CEBA;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #506f70;
-	}
-abbr {
-	border-bottom: none;
-    text-decoration: none;
-	}
-    
-/* specific divs */
-.page-wrapper { 
-	display: grid;
-    grid: auto-flow / 1fr 1fr 5fr 1fr 1fr;
-	padding: 0;  
-	margin: 2em; 
-	position: relative;
-	}  
-
-/* section {
-    margin-top: 10%;
-    background: url(triangle.svg) no-repeat top, url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
-    background-size: 15%, cover;
-    } */
-
-section, div, aside, .intro {
-    background-color: white;
-    grid-column-start: 3;
-    padding-left: 10%;
-    padding-right: 10%;
-    }
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-.summary {
-    background-color: transparent;
-	margin: auto;
-	width: 75%;
-    text-align: center;
-    align-content: center;
-	}
-    
-.summary p {
-	font: italic 1em/2 oxygen;
-    color: #4b2c23;
-	text-align: center;
-	}
-
-.preamble {
-	/* clear: right;  */
-	padding-top: 5%;
-    padding-bottom: 5%;
-    margin: auto;
-    background-color: #506f70;
-	}
-
-.preamble h3 {
-  color: white;
-  padding: 1em;
-  margin: 0;
-}  
-
-.preamble p {
-  color: white;
-  padding: 1em;
-  margin: 0;
-}
-
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
-
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
-
-.sidebar {
-    display: grid;
-	grid-template-columns: 2fr;
-    margin: 0;
-    padding: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px; 
-	background: transparent url('') top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	}
-/*.sidebar h3.select { 
-	background: transparent url('') no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	} */
-
-
-section {
-    margin-top: 10%;
-    background: url(triangle.svg) no-repeat top, url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
-    background-size: 10%, cover;
-}
-
-ul li {
-    list-style: none;
-    border: 2px solid #8b9474;
-    border-radius: 10px;
-    padding: 1.5%;
-    margin-bottom: 3%;
-}
-
-a:link {
-    text-decoration: none;
+    font-family: "Oxygen";
+    src: url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+   }
+   @font-face {
+    font-family: "DM Serif Display";
+    src: url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+   }
+   
+   
+   /* ********************* */
+   /* basic elements */
+   html {
+      max-width: 460px;
+      margin: 0;
+      padding: 0;
+      }
+   
+   
+   body {
+      font: 75%;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background-color: white;
+      }
+   
+   
+   h1, h2, h3 {
+      font-family: "DM Serif Display", Georgia, serif;
+      color: #436971;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 20;
+      text-align: center;
+   }
+   
+   
+   h1 {
+      margin-top: 10px;
+      display: block;
+      font-size: 5rem;
+      line-height: 5rem;
+      width: auto;
+   }
+   
+   
+   h2, h3 {
+      font-size: 2rem;
+   }
+   
+   
+   header h2 {
+      font-style: italic;
+      text-transform: lowercase;
+      color:  #4b2c23;
+      margin-bottom: 45%;
+   }
+   
+   
+   h3 {
+      font: 30%;
+      letter-spacing: 1px;
+      margin-bottom: 0;
+      }
+   
+   
+   p, a, li {
+    font-family: "Oxygen", Arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 1.2rem;
+    line-height: 2rem;
     color: #506f70;
-}
-
-.design-selection ul li {
-    width: 40%;
-    background-color: white;
-    text-align: center;
-    background: url(triangle.svg) no-repeat center;
-    background-size: 15%;
-}
-
-.design-name {
-    font-weight: bold;
-}
-
-.design-archives ul li {
-    background-color: #506F70;
-    border: none;
-    text-align: center;
-}
-
-.design-archives a:link {
-    color: #D0CEBA;
-    text-transform: uppercase;
-}
-
-.participation {
-    background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/buck.png?v=1678655021022) no-repeat bottom;
-    background-size: 80%;
-}
-
-.participation, .benefits, .requirements {
-    padding-bottom: 80%;
-}
-
-.benefits {
-    background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/fox.png?v=1678655482609) no-repeat bottom;
-    background-size: 80%;
-}
-
-.requirements {
-    background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/squirrel.png?v=1678654963098) no-repeat bottom;
-    background-size: 80%;
-}
+    padding: 1.5%;
+   }
+   
+   
+   abbr {
+      text-decoration: none;
+   }
+   
+   
+   /* .open {
+    display: block;
+   } */
+   
+   
+   .zen-resources ul li a {
+    display: block;
+    padding: 1rem 2vw;
+    font-weight: 600;
+    text-decoration: none;
+    border-top: 1px solid rgba(0, 0, 0, .5);
+   }
+   
+   
+   .zen-resources ul li.active a {
+    background-color: rgba(0,0,0,.2);
+    color: #fff;
+   }
+   
+   
+   .zen-resources ul li a:hover {
+    background-color: #e2e7f2;
+   }
+   
+   
+   a:link {
+      font-weight: bold;
+      text-decoration: none;
+      color: #4b2c23;
+      }
+   a:visited {
+      font-weight: bold;
+      text-decoration: none;
+      color: #D0CEBA;
+      }
+   a:hover, a:focus, a:active {
+      text-decoration: underline;
+      color: #506f70;
+      }
+   abbr {
+      border-bottom: none;
+      text-decoration: none;
+      }
+     
+   /* specific divs */
+   .page-wrapper {
+      display: grid;
+      grid: auto-flow / 1fr 1fr 5fr 1fr 1fr;
+      padding: 0; 
+      margin: 2em;
+      position: relative;
+      } 
+   
+   
+   /* section {
+      margin-top: 10%;
+      background: url(triangle.svg) no-repeat top, url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
+      background-size: 15%, cover;
+      } */
+   
+   
+   section, div, aside, .intro {
+      background-color: white;
+      grid-column-start: 3;
+      padding-left: 10%;
+      padding-right: 10%;
+      }
+   
+   
+   .intro {
+      min-width: 470px;
+      width: 100%;
+      }
+   
+   
+   .summary {
+      background-color: transparent;
+      margin: auto;
+      width: 75%;
+      text-align: center;
+      align-content: center;
+      }
+     
+   .summary p {
+      font: italic 1em/2 oxygen;
+      color: #4b2c23;
+      text-align: center;
+      }
+   
+   
+   .preamble {
+      /* clear: right;  */
+      padding-top: 5%;
+      padding-bottom: 5%;
+      margin: auto;
+      background-color: #506f70;
+      }
+   
+   
+   .preamble h3 {
+    color: white;
+    padding: 1em;
+    margin: 0;
+   } 
+   
+   
+   .preamble p {
+    color: white;
+    padding: 1em;
+    margin: 0;
+   }
+   
+   
+   .supporting {  
+      padding-left: 10px;
+      margin-bottom: 40px;
+      }
+   
+   
+   footer {
+      text-align: center;
+      }
+   footer a:link, footer a:visited {
+      margin-right: 20px;
+      }
+   
+   
+   .sidebar {
+      margin: 0;
+      padding: 0;
+      }
+   .sidebar .wrapper {
+      font: 10px;
+      background: transparent url('') top left repeat-y;
+      padding: 10px;
+      margin-top: 150px;
+      }
+   
+   
+   .sidebar nav ul {
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-rows: 1fr;
+      align-items: center;
+      justify-content: center;
+      }
+   
+   
+   /*.sidebar h3.archives {
+      background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
+      margin: 25px 0 5px 0;
+      width:57px;
+      height: 14px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      }
+   .sidebar h3.resources {
+      background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
+      margin: 25px 0 5px 0;
+      width:63px;
+      height: 10px;
+      text-indent: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      }
+   
+   
+   .sidebar li {
+      line-height: 1.3em;
+      background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
+      display: block;
+      padding-top: 5px;
+      margin-bottom: 5px;
+      list-style-type: none;
+      }
+   .sidebar li a:link {
+      color: #988F5E;
+      }
+   .sidebar li a:visited {
+      color: #B3AE94;
+      }
+   .extra1 {
+      background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
+      position: absolute;
+      top: 40px;
+      right: 0;
+      width: 148px;
+      height: 110px;
+      } */
+   
+   
+   
+   
+   section {
+      margin-top: 10%;
+      background: url(triangle.svg) no-repeat top, url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
+      background-size: 10%, cover;
+   }
+   
+   
+   ul li {
+      list-style: none;
+      border: 2px solid #8b9474;
+      border-radius: 10px;
+      padding: 1.5%;
+      margin-bottom: 3%;
+   }
+   
+   
+   a:link {
+      text-decoration: none;
+      color: #506f70;
+   }
+   
+   
+   .design-selection ul li {
+      width: 40%;
+      background-color: white;
+      text-align: center;
+      background: url(triangle.svg) no-repeat center;
+      background-size: 15%;
+   }
+   
+   
+   .design-name {
+      font-weight: bold;
+   }
+   
+   
+   .design-archives ul li {
+      background-color: #506F70;
+      border: none;
+      text-align: center;
+   }
+   
+   
+   .design-archives a:link {
+      color: #D0CEBA;
+      text-transform: uppercase;
+   }
+   
+   
+   .participation {
+      background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/buck.png?v=1678655021022) no-repeat bottom;
+      background-size: 80%;
+   }
+   
+   
+   .participation, .benefits, .requirements {
+      padding-bottom: 80%;
+   }
+   
+   
+   .benefits {
+      background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/fox.png?v=1678655482609) no-repeat bottom;
+      background-size: 80%;
+   }
+   
+   
+   .requirements {
+      background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/squirrel.png?v=1678654963098) no-repeat bottom;
+      background-size: 80%;
+   }
+   
+   
+   
+   
