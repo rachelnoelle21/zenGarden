@@ -42,6 +42,7 @@ body abbr {
   text-align: center;
   padding-right: 40px;
   text-transform: uppercase;
+  letter-spacing: 1px;
   text-decoration: none;
 }
 .zen-resources li a:hover {
@@ -64,24 +65,35 @@ body abbr {
 }
 #zen-intro h2 {
   color: #436971;
+  font-size: 200%;
 }
 #zen-intro #zen-summary {
   margin: 0 auto;
+  margin-bottom: 3rem;
   padding: 80px 0px;
-  color: white;
   max-width: 50%;
+  font-style: italic;
+  font-size: 120%;
+  color: #4B2C23;
+  background-color: rgba(255, 255, 255, 0.65);
 }
 #zen-intro #zen-summary a {
+  display: block;
+  margin: 10px;
   text-decoration: none;
-  color: white;
-  border: 2px solid white;
+  color: #436971;
+  border: 2px solid #436971;
   border-radius: 10px;
   padding: 20px;
+  font-family: "DM Serif Display", Georgia, serif;
+  font-style: normal;
   text-transform: uppercase;
+  letter-spacing: 1px;
 }
 #zen-intro #zen-summary a:hover {
   background-color: white;
   color: #436971;
+  text-decoration: underline;
 }
 #zen-intro #zen-preamble {
   margin: 0 auto;
@@ -104,16 +116,37 @@ div [role=article] {
   max-width: 85%;
   gap: 12px;
 }
+div [role=article] p[role=contentinfo] {
+  font-family: "DM Serif Display", Georgia, serif;
+  background-color: #8B9474;
+  padding: 80px;
+  text-align: center;
+}
+div [role=article] p[role=contentinfo] a {
+  font-family: "DM Serif Display", Georgia, serif;
+  color: black;
+  text-decoration: underline;
+}
+div [role=article] p[role=contentinfo] a:hover {
+  color: #D0CEBA;
+}
 div [role=article] p {
   grid-column: 2/3;
 }
-div [role=article] h3, div [role=article] .design-selection h3 {
+div [role=article] h3 {
   margin: 0 auto;
   font-size: 150%;
   padding-top: 70px;
   grid-column: 2/3;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+div [role=article] a {
+  text-decoration: none;
+  color: #8B9474;
+}
+div [role=article] a:hover {
+  text-decoration: underline;
 }
 
 .participation {
@@ -137,46 +170,60 @@ div [role=article] h3, div [role=article] .design-selection h3 {
 
 .sidebar {
   margin: 0 auto;
-  background-color: #436971;
+  background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
+  background-size: 200%, cover;
   color: white;
+  margin-bottom: 6rem;
 }
-.sidebar .design-selection {
-  margin: 0 auto;
+.sidebar h3 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-top: 60px;
   text-align: center;
 }
-.sidebar nav {
+.sidebar .design-selection, .sidebar .design-archives {
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(139, 148, 116, 0.65);
+  max-width: 60%;
+  padding-bottom: 60px;
+}
+.sidebar .design-selection ul, .sidebar .design-archives ul {
+  margin: 0 auto;
+  text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  max-width: 60%;
 }
-.sidebar nav ul:nth-child(-n+4) {
+.sidebar .design-selection ul ul:nth-child(-n+4), .sidebar .design-archives ul ul:nth-child(-n+4) {
   grid-column: 1/2;
 }
-.sidebar nav ul:nth-child(n+4) {
+.sidebar .design-selection ul ul:nth-child(n+4), .sidebar .design-archives ul ul:nth-child(n+4) {
   grid-column: 2/3;
 }
-.sidebar nav li {
+.sidebar .design-selection ul li, .sidebar .design-archives ul li {
   list-style: none;
   margin: 20px;
   padding: 20px;
   border: 2px solid white;
   border-radius: 15px;
 }
-.sidebar nav li a {
+.sidebar .design-selection ul li a, .sidebar .design-archives ul li a {
   text-decoration: none;
   color: white;
 }
-.sidebar nav li a:first-child {
+.sidebar .design-selection ul li a:first-child, .sidebar .design-archives ul li a:first-child {
   font-family: "DM Serif Display", Georgia, serif;
   text-transform: uppercase;
 }
-.sidebar nav li:hover {
+.sidebar .design-selection ul li:hover, .sidebar .design-archives ul li:hover {
   background-color: white;
   color: #436971;
 }
-.sidebar nav li:hover a {
+.sidebar .design-selection ul li:hover a, .sidebar .design-archives ul li:hover a {
   color: #436971;
 }
-.sidebar nav li a:hover {
+.sidebar .design-selection ul li a:hover, .sidebar .design-archives ul li a:hover {
   text-decoration: underline;
 }
 
