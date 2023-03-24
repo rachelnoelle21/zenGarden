@@ -1,9 +1,306 @@
 // styles.scss
+@use 'variables' as *;
 @use 'atoms';  // assumes file is named _atoms.scss
 @use 'molecules';
 @use 'organisms' as o;  // can shorten the name if we like :)
 
 body {
+  margin: 0;
+  overflow-x: hidden;
+  abbr {
+    text-decoration: none;
+  }
+}
+
+.page-wrapper {
+  &::before {
+    content: "";
+    background-image: url(./images/topography.svg);
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+
+// nav bar
+.resources {
+  display: none;
+}
+.zen-resources {
+  position: absolute;
+  top: 0;
+  width: 98%;
+  a {
+    display: inline;
+    color: $darkblue;
+    float: right;
+    text-align: center;
+    padding-right: 40px;
+    @include caps-header;
+    text-decoration: none;
+    }
+  li a:hover {
+    text-shadow: 0px 0px .5px black;
+    }
+  ul {
+    text-decoration: none;
+    list-style: none
+    }
+}
+// nav bar
+
+// intro
+#zen-intro {
+  text-align: center;
+  padding-top: 8rem;
+  background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
+  background-size: 200%, cover;
+  h1 {
+    font-size: 400%;
+    color: $darkblue;
+  }
+  h2 {
+    color: $darkgreen;
+    font-size: 170%;
+    text-transform: lowercase;
+    font-style: italic;
+  }
+  #zen-summary {
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    padding: 80px 0px;
+    max-width: 50%;
+    font-style: italic;
+    font-size: 120%;
+    color: $maroon;
+    background-color: rgb(255, 255, 255, .65);
+    a {
+      display: block;
+      margin: 10px;
+      text-decoration: none;
+      color: $darkblue;
+      border: 2px solid $darkblue;
+      border-radius: 10px;
+      padding: 20px;
+      font-family: $headers;
+      font-style: normal;
+      @include caps-header;
+    }
+    a:hover {
+      background-color: $darkblue;
+      color: white;
+    }
+  }
+  #zen-preamble {
+    margin: 0 auto;
+    color: white;
+    background-color: $darkblue;
+    padding: 60px 0;
+    max-width: 60%;
+  }
+}
+
+
+
+// body stuff
+.summary {
+  text-align: center;
+  margin: 5rem 0;
+}
+
+div [role="article"] {
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-auto-flow: dense;
+  max-width: 85%;
+  gap: 12px;
+  p[role="contentinfo"] {
+    font-family: $headers;
+    background-color: $darkgreen;
+    padding: 80px;
+    text-align: center;
+    a {
+      font-family: $headers;
+      color: black;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: $lightgreen;
+    }
+  }
+  p {
+    grid-column: 2/3;
+    }
+  h3 {
+    margin: 0 auto;
+    font-size: 150%;
+    padding-top: 70px;
+    grid-column: 2/3;
+    @include caps-header;
+  }
+  a {
+    text-decoration: none;
+    color: $darkgreen;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+.participation {
+  background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/buck.png?v=1678655021022) no-repeat bottom;
+  background-size: 40%;
+}
+
+.participation, .benefits, .requirements {
+  padding-bottom: 40%;
+}
+
+.benefits {
+  background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/fox.png?v=1678655482609) no-repeat bottom;
+  background-size: 40%;
+}
+
+.requirements {
+  background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/squirrel.png?v=1678654963098) no-repeat bottom;
+  background-size: 40%;
+}
+
+// for the sidebar aside
+.sidebar {
+  margin: 0 auto;
+  background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
+  background-size: 200%, cover;
+  color: white;
+  margin-bottom: 6rem;
+  h3 {
+    @include caps-header;
+    padding-top: 60px;
+    text-align: center;
+  }
+  .design-selection, .design-archives {
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(139,148,116, 0.65);
+    max-width: 60%;
+    padding-bottom: 60px;
+    ul {
+      margin: 0 auto;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 60%;
+      ul:nth-child(-n+4) {
+        grid-column: 1/2;
+      }
+      ul:nth-child(n+4) {
+        grid-column: 2/3;
+      }
+      li {
+        list-style: none;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid white;
+        border-radius: 15px;
+      }
+      li a {
+        text-decoration: none;
+        color: white;
+      }
+      li a:first-child {
+        font-family: $headers;
+        text-transform: uppercase;
+      }
+      li:hover {
+        background-color: white;
+        color: $darkblue;
+        a {
+          color: $darkblue;
+        }
+      }
+      li a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+// for footer
+footer {
+  margin: 0 auto;
+  text-align: center;
+  margin: 90px 0px;
+  a {
+    border: 2px solid $darkblue;
+    border-radius: 15px;
+    padding: 20px;
+    text-decoration: none;
+    color: $darkblue;
+  }
+  a:hover {
+    background-color: $darkblue;
+    color: white;
+  }
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+  html {
+	  margin: 0 auto;
+	  padding: 0;
+	}
+
+  body { 
+    font: 75%;
+    margin: 0 auto; 
+    padding: 0;
+    width: 100%;
+  }
+  #zen-intro {
+    margin: 0 auto; 
+    background-size: 1000%, cover;
+    #zen-summary {
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      padding: 80px 0px;
+      max-width: 90%;
+    }
+  }
+
+  div [role="article"] {
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+  }
+
+  .sidebar {
+    h3 {
+      @include caps-header;
+      padding-top: 60px;
+      text-align: center;
+    }
+    .design-selection, .design-archives {
+      margin: 0 auto;
+      text-align: center;
+      background-color: rgba(139,148,116, 0.65);
+      max-width: 80%;
+      padding-bottom: 60px;
+      ul {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        max-width: 100%;
+        
+      }
+    }
+  }
 }

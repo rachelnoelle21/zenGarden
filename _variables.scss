@@ -7,7 +7,7 @@
     src: url('https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap');
 }
 
-$darkblue: #506F70;
+$darkblue: #436971;
 $darkgreen: #8B9474;
 $lightblue: #E2E7F2;
 $lightgreen: #D0CEBA;
@@ -15,3 +15,8 @@ $maroon: #4B2C23;
 
 $body: 'Oxygen', Arial, sans-serif;
 $headers: 'DM Serif Display', Georgia, serif;
+
+@mixin caps-header {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
