@@ -171,7 +171,6 @@
    
    
    .preamble {
-      /* clear: right;  */
       padding-top: 5%;
       padding-bottom: 5%;
       margin: auto;
@@ -222,59 +221,56 @@
    .sidebar nav ul {
       margin: 0;
       padding: 0;
-      display: grid;
-      grid-template-rows: 1fr;
-      align-items: center;
-      justify-content: center;
       }
    
-   
-   /*.sidebar h3.archives {
-      background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left;
-      margin: 25px 0 5px 0;
-      width:57px;
-      height: 14px;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
+    /* Side bar  */
+     
+     .sidebar .design-selection, .sidebar .design-archives {
+        margin: 0 auto;
+        text-align: center;
+        background-color: rgba(139, 148, 116, 0.65);
+        max-width: 100%;
+        padding-bottom: 60px;
       }
-   .sidebar h3.resources {
-      background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left;
-      margin: 25px 0 5px 0;
-      width:63px;
-      height: 10px;
-      text-indent: 100%;
-      white-space: nowrap;
-      overflow: hidden;
+       .sidebar .design-selection ul, .sidebar .design-archives ul {
+        margin: 0 auto;
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 60%;
       }
-   
-   
-   .sidebar li {
-      line-height: 1.3em;
-      background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center;
-      display: block;
-      padding-top: 5px;
-      margin-bottom: 5px;
-      list-style-type: none;
+      /*.sidebar .design-selection ul ul:nth-child(-n+4), .sidebar .design-archives ul ul:nth-child(-n+4) {
+        grid-column: 1/2;
       }
-   .sidebar li a:link {
-      color: #988F5E;
+      .sidebar .design-selection ul ul:nth-child(n+4), .sidebar .design-archives ul ul:nth-child(n+4) {
+        grid-column: 2/3;
       }
-   .sidebar li a:visited {
-      color: #B3AE94;
+      .sidebar .design-selection ul li, .sidebar .design-archives ul li {
+        list-style: none;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid white;
+        border-radius: 15px;
       }
-   .extra1 {
-      background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat;
-      position: absolute;
-      top: 40px;
-      right: 0;
-      width: 148px;
-      height: 110px;
+      .sidebar .design-selection ul li a, .sidebar .design-archives ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      .sidebar .design-selection ul li a:first-child, .sidebar .design-archives ul li a:first-child {
+        font-family: "DM Serif Display", Georgia, serif;
+        text-transform: uppercase;
+      }
+      .sidebar .design-selection ul li:hover, .sidebar .design-archives ul li:hover {
+        background-color: white;
+        color: #436971;
+      }
+      .sidebar .design-selection ul li:hover a, .sidebar .design-archives ul li:hover a {
+        color: #436971;
+      }
+      .sidebar .design-selection ul li a:hover, .sidebar .design-archives ul li a:hover {
+        text-decoration: underline;
       } */
-   
-   
-   
-   
+
    section {
       margin-top: 10%;
       background: url(triangle.svg) no-repeat top, url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
@@ -332,6 +328,8 @@
    
    .participation, .benefits, .requirements {
       padding-bottom: 80%;
+      margin-right: 0;
+      margin-left: 0;
    }
    
    
