@@ -54,7 +54,7 @@
       font-style: italic;
       text-transform: lowercase;
       color:  #4b2c23;
-      margin-bottom: 45%;
+      margin: -50px auto;
    }
    
    
@@ -62,7 +62,7 @@
       font: 30%;
       letter-spacing: 1px;
       margin-bottom: 0;
-      }
+   }
    
    
    p, a, li {
@@ -71,75 +71,76 @@
     font-size: 1.2rem;
     line-height: 2rem;
     color: #506f70;
-    padding: 1.5%;
    }
-   
-   
-   abbr {
-      text-decoration: none;
-   }
-   
-   
-   /* .open {
-    display: block;
-   } */
-   
-   
-   .zen-resources ul li a {
-    display: block;
-    padding: 1rem 2vw;
-    font-weight: 600;
-    text-decoration: none;
-    border-top: 1px solid rgba(0, 0, 0, .5);
-   }
-   
-   
-   .zen-resources ul li.active a {
-    background-color: rgba(0,0,0,.2);
-    color: #fff;
-   }
-   
-   
-   .zen-resources ul li a:hover {
-    background-color: #e2e7f2;
-   }
-   
-   
+
    a:link {
       font-weight: bold;
       text-decoration: none;
-      color: #4b2c23;
-      }
+      color: #506F70;;
+   }
+
    a:visited {
       font-weight: bold;
       text-decoration: none;
-      color: #D0CEBA;
-      }
+      color: #506F70;
+   }
+
    a:hover, a:focus, a:active {
       text-decoration: underline;
       color: #506f70;
-      }
+   }
+
    abbr {
       border-bottom: none;
       text-decoration: none;
+   }
+   
+   h1::after {
+      display: block;
+      align-items: center;
+      justify-content: center;
+      content: "";
+      width: 70px;
+      height: 70px;
+      margin: 25px auto; 
+      background: url(mountains.svg) no-repeat;
+      background-size: 100%;
+      animation: jiggle 2s ease 0s 1 normal forwards;
+    }
+    
+    @keyframes jiggle {
+      0%,
+      100% {
+        transform: translateX(0%);
+        transform-origin: 50% 50%;
       }
+    
+      15% {
+        transform: translateX(-30px) rotate(-6deg);
+      }
+    
+      30% {
+        transform: translateX(15px) rotate(6deg);
+      }
+    
+      45% {
+        transform: translateX(-15px) rotate(-3.6deg);
+      }
+    
+      60% {
+        transform: translateX(9px) rotate(2.4deg);
+      }
+    
+      75% {
+        transform: translateX(-6px) rotate(-1.2deg);
+      }
+    }
      
    /* specific divs */
    .page-wrapper {
-      display: grid;
-      grid: auto-flow / 1fr 1fr 5fr 1fr 1fr;
       padding: 0; 
-      margin: 2em;
       position: relative;
-      } 
-   
-   
-   /* section {
-      margin-top: 10%;
-      background: url(triangle.svg) no-repeat top, url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
-      background-size: 15%, cover;
-      } */
-   
+      }
    
    section, div, aside, .intro {
       background-color: white;
@@ -150,15 +151,20 @@
    
    
    .intro {
-      min-width: 470px;
+      min-width: 375px;
       width: 100%;
       }
-   
-   
+
+   section {
+      margin-top: 10%;
+      background: no-repeat top, url(forest-hero.png) no-repeat center;
+      background-size: 10%, cover;
+   }
+      
    .summary {
       background-color: transparent;
-      margin: auto;
-      width: 75%;
+      margin: 100px auto;
+      width: 80%;
       text-align: center;
       align-content: center;
       }
@@ -168,8 +174,27 @@
       color: #4b2c23;
       text-align: center;
       }
-   
-   
+
+   #zen-intro #zen-summary a {
+      display: block;
+      margin: 10px;
+      text-decoration: none;
+      color: white;
+      background-color: #8b9474;
+      border-radius: 16px 0px;
+      padding: 20px 0px;
+      font-size: 15px;
+      font-style: italic;
+      text-transform: lowercase;
+      letter-spacing: 1px;
+      opacity: 70%;
+    }
+
+    #zen-intro #zen-summary a:hover {
+      background-color: #436971;
+      color: white;
+    }
+    
    .preamble {
       padding-top: 5%;
       padding-bottom: 5%;
@@ -190,117 +215,115 @@
     padding: 1em;
     margin: 0;
    }
+
+  .preamble h3::before {
+      display: block;
+      position: relative;
+      top: -20px;
+      bottom: 100px;
+      content: "";
+      width: 50px;
+      height: 50px;
+      margin: auto;
+      background: url(tress.svg) no-repeat;
+      background-size: 100%;
+      animation: jiggle 2s ease 0s 1 normal forwards;
+    } 
+
+   article {
+      margin: auto;
+   }
    
-   
-   .supporting {  
-      padding-left: 10px;
-      margin-bottom: 40px;
-      }
-   
-   
+   #zen-supporting {
+      margin: auto;
+      width: 100%;
+   }
+
    footer {
+      margin: 0 auto;
       text-align: center;
+      margin: 25px auto;
+      padding: .5em;
       }
-   footer a:link, footer a:visited {
-      margin-right: 20px;
-      }
-   
-   
-   .sidebar {
-      margin: 0;
-      padding: 0;
-      }
-   .sidebar .wrapper {
-      font: 10px;
-      background: transparent url('') top left repeat-y;
+       
+   footer a {
+      border: 2px solid #436971;
+      border-radius: 15px;
       padding: 10px;
-      margin-top: 150px;
-      }
-   
+      text-decoration: none;
+      color: #436971;
+   }
+       
+   footer a:hover {
+      background-color: #436971;
+      color: white;
+   }
+
+    /* Side bar  */
+
+   .sidebar {
+      margin: auto;
+      padding: 0;
+      width: 100%;
+   }
    
    .sidebar nav ul {
-      margin: 0;
+      margin: auto;
       padding: 0;
-      }
-   
-    /* Side bar  */
-     
-     .sidebar .design-selection, .sidebar .design-archives {
-        margin: 0 auto;
-        text-align: center;
-        background-color: rgba(139, 148, 116, 0.65);
-        max-width: 100%;
-        padding-bottom: 60px;
-      }
-       .sidebar .design-selection ul, .sidebar .design-archives ul {
-        margin: 0 auto;
-        text-align: center;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        max-width: 60%;
-      }
-      /*.sidebar .design-selection ul ul:nth-child(-n+4), .sidebar .design-archives ul ul:nth-child(-n+4) {
-        grid-column: 1/2;
-      }
-      .sidebar .design-selection ul ul:nth-child(n+4), .sidebar .design-archives ul ul:nth-child(n+4) {
-        grid-column: 2/3;
-      }
-      .sidebar .design-selection ul li, .sidebar .design-archives ul li {
-        list-style: none;
-        margin: 20px;
-        padding: 20px;
-        border: 2px solid white;
-        border-radius: 15px;
-      }
-      .sidebar .design-selection ul li a, .sidebar .design-archives ul li a {
-        text-decoration: none;
-        color: white;
-      }
-      .sidebar .design-selection ul li a:first-child, .sidebar .design-archives ul li a:first-child {
-        font-family: "DM Serif Display", Georgia, serif;
-        text-transform: uppercase;
-      }
-      .sidebar .design-selection ul li:hover, .sidebar .design-archives ul li:hover {
-        background-color: white;
-        color: #436971;
-      }
-      .sidebar .design-selection ul li:hover a, .sidebar .design-archives ul li:hover a {
-        color: #436971;
-      }
-      .sidebar .design-selection ul li a:hover, .sidebar .design-archives ul li a:hover {
-        text-decoration: underline;
-      } */
+   } 
 
-   section {
-      margin-top: 10%;
-      background: url(triangle.svg) no-repeat top, url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/forest-hero.png?v=1678657783617) no-repeat center;
-      background-size: 10%, cover;
-   }
-   
-   
-   ul li {
-      list-style: none;
-      border: 2px solid #8b9474;
-      border-radius: 10px;
-      padding: 1.5%;
-      margin-bottom: 3%;
-   }
-   
-   
-   a:link {
-      text-decoration: none;
-      color: #506f70;
-   }
-   
-   
-   .design-selection ul li {
-      width: 40%;
-      background-color: white;
+   .sidebar h3 {
+      width: 100%;
+      color: white;
+      letter-spacing: 1px;
+      padding-top: 60px;
       text-align: center;
-      background: url(triangle.svg) no-repeat center;
-      background-size: 15%;
    }
-   
+       
+   .sidebar .design-selection {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      background-color: rgba(139, 148, 116, 0.65);
+      padding-bottom: 60px;
+   }
+       
+   .sidebar .design-archives {
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      background-color: #436971;
+      padding-bottom: 60px;
+   }
+       
+   .sidebar .design-selection ul li,
+   .sidebar .design-archives ul li {
+      list-style: none;
+      color: white;
+      width: 75%;
+      margin: 20px;
+      padding: 20px;
+      border: 2px solid white;
+      border-radius: 15px;
+   }
+       
+   .sidebar .design-selection ul li a,
+   .sidebar .design-archives ul li a {
+      text-decoration: none;
+      color: white;
+   }
+       
+   .sidebar .design-selection ul li:hover,
+   .sidebar .design-archives ul li:hover {
+      background-color: white;
+      color: #436971;
+   }
+       
+   .sidebar .design-selection ul li:hover a,
+   .sidebar .design-archives ul li:hover a {
+      color: #436971;
+   }
+
    
    .design-name {
       font-weight: bold;
@@ -315,13 +338,12 @@
    
    
    .design-archives a:link {
-      color: #D0CEBA;
+      color: #506F70;
       text-transform: uppercase;
    }
-   
-   
+      
    .participation {
-      background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/buck.png?v=1678655021022) no-repeat bottom;
+      background: url(buck.png) no-repeat bottom;
       background-size: 80%;
    }
    
@@ -334,15 +356,50 @@
    
    
    .benefits {
-      background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/fox.png?v=1678655482609) no-repeat bottom;
+      background: url(fox.png) no-repeat bottom;
       background-size: 80%;
    }
    
    
    .requirements {
-      background: url(https://cdn.glitch.global/c479792c-18be-425b-983f-e7b4117199bd/squirrel.png?v=1678654963098) no-repeat bottom;
+      background: url(squirrel.png) no-repeat bottom;
       background-size: 80%;
    }
+
+   .requirements [role] {
+      width: 100%;
+      background-color: rgba(139, 148, 116, 0.65);
+      color: #4b2c23;
+      padding: 1.5em;
+      text-align: center;
+   }
+
+   .requirements [role] a {
+      color: #4b2c23;
+   }
+   
+   .zen-resources h3 {
+      display: none;
+    }
+
+    .zen-resources a {
+      display: block;
+      margin-top: 0;
+      padding: 0;
+      font: italic .75em/2 oxygen;
+      color: #4b2c23;
+      text-align: center;
+    }
+    
+    .zen-resources ul {
+      display: flex;
+      flex-direction: column;
+      margin: 1.5em;
+      padding: 0;
+      align-items: center;
+      justify-items: center;
+      list-style: none;
+    }
    
    
    
